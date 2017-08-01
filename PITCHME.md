@@ -107,7 +107,6 @@ in beer bash 2017/8/XX
 ---
 ## 使い方
 - docker コンテナ作ってサービスに投げる
-- 難しいことはない
 - 個人ユースだと
   - 自宅の GPU で少し実験
   - 本番は GPU クラウドで実行
@@ -154,7 +153,7 @@ in beer bash 2017/8/XX
  - 機械学習が加速する！
 
 ---
-## What is Tensor Core
+## Tensor Core
 - $4{\times}4$ の行列の積と和
 $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
 - 行列に特殊化した積和演算という趣
@@ -162,7 +161,7 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
   - 扱う対象を行列演算に拡張した
 
 ---
-## What is Tensor Core
+## Tensor Core
 - $4{\times}4$ の行列の積と和
 $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
 - そのほか
@@ -172,7 +171,14 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
   - 実行は２クロック
 
 ---
-## What is Tensor Core
+## Tensor Core
+- $4{\times}4$ で十分？
+  - 巨大な行列演算は小さい行列演算の組み合わせ
+  - 小さいサイズでも行列演算を高速にできれば OK
+  - テンソルの階数が増えても同じ
+
+---
+## Tensor Core
 - なんと脅威の 120 TFLOPS
   - すべて Tensor Core で演算した場合の話
   - ぶっちゃけ眉唾である
@@ -191,12 +197,6 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
 ---?image=assets/v100_whole_diagram.gif&size=contain
 
 ---?image=assets/v100_sm_diagram.gif&size=contain
-
----
-## What is Tensor Core
-- $4{\times}4$ の理由
-  - 巨大な行列演算は小さい行列演算の組み合わせ
-  - 小さいサイズの行列演算を高速にできればそれで OK
 
 ---
 # 量子コンピューティング
@@ -248,7 +248,7 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
 - [NVIDIA Deep Learning Institute 2017 基調講演](https://www.slideshare.net/NVIDIAJapan/nvidia-deep-learning-institute-2017)
 - [インテル® Xeon® プロセッサー E7-8800 v2 ファミリー ベンチマーク結果 | HPCシステムズはすべての研究開発者に計算力を提供します。](http://www.hpc.co.jp/benchmark20150213.html)
 
----
++++
 # 補足資料
 
 ---
