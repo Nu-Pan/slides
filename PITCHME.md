@@ -247,6 +247,7 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
 - [D-Wave、”GeForce GTX 1080比で1万倍高速“な量子コンピュータ「D-Wave 2000Q」 ～量子ビット数が前製品から2倍に - PC Watch](http://pc.watch.impress.co.jp/docs/news/1040817.html)
 - [NVIDIA Deep Learning Institute 2017 基調講演](https://www.slideshare.net/NVIDIAJapan/nvidia-deep-learning-institute-2017)
 - [インテル® Xeon® プロセッサー E7-8800 v2 ファミリー ベンチマーク結果 | HPCシステムズはすべての研究開発者に計算力を提供します。](http://www.hpc.co.jp/benchmark20150213.html)
+- [NVIDIA TESLA V100・CUDA 9 のご紹介](https://www.slideshare.net/NVIDIAJapan/nvidia-tesla-v100cuda-9)
 
 +++
 # 補足資料
