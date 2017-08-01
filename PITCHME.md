@@ -249,7 +249,7 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
 - [インテル® Xeon® プロセッサー E7-8800 v2 ファミリー ベンチマーク結果 | HPCシステムズはすべての研究開発者に計算力を提供します。](http://www.hpc.co.jp/benchmark20150213.html)
 - [NVIDIA TESLA V100・CUDA 9 のご紹介](https://www.slideshare.net/NVIDIAJapan/nvidia-tesla-v100cuda-9)
 
-+++
+---
 # 補足資料
 
 ---
