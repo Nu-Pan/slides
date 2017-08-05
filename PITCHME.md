@@ -153,6 +153,7 @@ in beer bash 2017/8/XX
 - volta の新機能を使えるようになる
 - テンソルコアが最重要トピック
  - AI の学習が加速する！（AIだけじゃないけど！）
+ - 他にもあるけど割愛
 
 +++
 ## Tensor Core
@@ -421,6 +422,31 @@ HDD からデータをロードして処理しようと思ったら
 - 入札制なので価格が変動する
 - オンデマンドの 14% から 1000%
 - 指定した上限を超えた瞬間に強制停止されるらしい
+
+---
+# nVidia v100 新機能
+
++++
+## key features
+- New Streaming Multiprocessor (SM) Architecture Optimized for Deep Learning
+- Second-Generation NVLink
+- HBM2 Memory
+- Volta Multi-Process Service
+- Enhanced Unified Memory and Address Translation Services
+- Cooperative Groups and New Cooperative Launch APIs
+- Maximum Performance and Maximum Efficiency Modes
+- Volta Optimized Software
+
++++
+## ほかキーワード
+- Tensor Core
+- ENHANCED L1 DATA CACHE AND SHARED MEMORY
+- Independent Thread Scheduling
+- STARVATION-FREE ALGORITHMS
+
++++
+## くわしくは
+[Inside Volta: The World’s Most Advanced Data Center GPU | Parallel Forall](https://devblogs.nvidia.com/parallelforall/inside-volta/)
 
 ---
 # 量子コンピューティング
