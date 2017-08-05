@@ -493,6 +493,12 @@ HDD からデータをロードして処理しようと思ったら
 
 [ニューラルネットワークの量子化についての最近の研究の進展と、その重要性 - SmartNews 開発者ブログ](https://developer.smartnews.com/blog/2017/03/neural-network-quantization/)
 
++++
+## 一方 nVidia は
+- nVidia Jetson を出している
+- 組み込み向けのボード（キット）
+- ロボットとかドローンとか
+
 ---
 # 量子コンピューティング
 
