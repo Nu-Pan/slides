@@ -233,6 +233,9 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
   - 学習 -> 確率的勾配法 -> 焼きなまし法
 
 ---
+# まとめ
+
++++
 ## まとめ
 - GPU はマッチすれば凄く速い！
 - ハードウェアレベルで深層学習の方を向いている
