@@ -432,6 +432,9 @@ HDD からデータをロードして処理しようと思ったら
 - Second-Generation NVLink
 - HBM2 Memory
 - Volta Multi-Process Service
+
++++
+## key features
 - Enhanced Unified Memory and Address Translation Services
 - Cooperative Groups and New Cooperative Launch APIs
 - Maximum Performance and Maximum Efficiency Modes
