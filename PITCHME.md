@@ -452,6 +452,47 @@ HDD からデータをロードして処理しようと思ったら
 [Inside Volta: The World’s Most Advanced Data Center GPU | Parallel Forall](https://devblogs.nvidia.com/parallelforall/inside-volta/)
 
 ---
+# TPU
+
++++
+## TPU とは
+- Tensor Processing Unit
+- google の作った AI 用 IC
+- 特定用途向け IC というやつ
+
++++
+## 第一世代(2016)
+- 学習結果を使ってサービスを提供するに当たって
+ - 計算資源の不足が予測されていた
+ - 一度の推論で結構な量の行列演算が発生する
+- 不足を補うための専用ハード
+ - 推論専用のハードウェア
+ - 整数に量子化して簡素化
+
++++
+## 第二世代(2017)
+- Cloud TPU
+- 推論だけでなく学習も可能
+  - すでに google にサービスで利用中
+- なんと 180 TFLOPS
+ - 64 枚束ねた TPU ポッドで 11.5 PFLOPS!
+
++++
+## Tensor Flow Lite
+- モバイル向けの API
+- 専用 DSP によるアクセラレーションを前提とするらしい
+- 推論も学習もどっちも？
+
++++
+## 勝手な予測
+- 深層学習の量子化については別途研究が進んでいる
+- あまり精度を落とさずに過激な量子化が可能
+- ２値化すれば xor と popcount で演算可能
+- ココらへんの技術を使ってモバイル上で実現しようとしている？
+
+[ニューラルネットワークの量子化についての最近の研究の進展と、その重要性 - SmartNews 開発者ブログ](https://developer.smartnews.com/blog/2017/03/neural-network-quantization/)
+
+---
 # 量子コンピューティング
 
 +++
