@@ -194,9 +194,9 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
 
 [公式](https://devblogs.nvidia.com/parallelforall/inside-volta/) の出しているダイアグラムで見ると…。
 
----?image=assets/v100_whole_diagram.png&size=contain
++++?image=assets/v100_whole_diagram.png&size=contain
 
----?image=assets/v100_sm_diagram.png&size=contain
++++?image=assets/v100_sm_diagram.png&size=contain
 
 ---
 # 量子コンピューティング
