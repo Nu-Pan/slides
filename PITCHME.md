@@ -4,11 +4,10 @@ in beer bash 2017/8/XX
 ---
 # お品書き
 
----
++++
 ## お品書き
 - 前半（概要）
  - GPGPU について
- - GPGPUするなら
 - 後半（トピック）
  - GPU クラウド
  - ディープラーニング
@@ -17,19 +16,19 @@ in beer bash 2017/8/XX
 ---
 # はじめに
 
----
++++
 ## なんで GPU ？
 - ムーアの法則
 - CPU はもう頭打ち
 - GPU はまだ望みがある
 
----
-## タダ乗りしたい！
++++
+## 性能向上にあやかりたい
 - なんでも GPU で実行できるのか？
 - そもそも言うほどすごいのか？
 
----
-## タダ乗りしたい！
++++
+## 性能向上にあやかりたい
 - なんでもは出来ないです
 - でもマッチする問題ではすごい性能を発揮
 - そういうお話をします！
@@ -37,18 +36,19 @@ in beer bash 2017/8/XX
 ---
 # What is GPGPU
 
----
++++
 ## What is GPGPU
 - `G`eneral-`p`urpose computing on `g`raphics `p`rocessing `u`nits
 - GPU を汎用的にいろんな計算に使いますよ、ということ
 - グラフィックスと全然関係無いことにも使える
 
----
++++
 ## CPU じゃダメなのか？
 - CPU だと遅い処理があったとき
 - GPU にやらせると爆速（になることがある）
+- 使い分けの問題
 
----
++++
 ## どのくらい速いのか？
 - 論文の最後に GPGPU という呪文を書くのが横行するくらい
 - future work にGPGPU で高速化って書く
@@ -63,7 +63,7 @@ in beer bash 2017/8/XX
 
 ### CPU の 20 倍！
 
----
++++
 ## ネットに上がっていたベンチ
 - 計測時の環境は
   - core i7 6700K(skylake)
@@ -77,7 +77,7 @@ in beer bash 2017/8/XX
 | core i7 6700K | 1 | 0.1 | x1 |
 | Xeon E7-8857 v2 | 8 | 4 | x40 |
 
----
++++
 ## ネットに上がっていたベンチ
 | 製品名 | 個数 | TFLOPS | 倍率 |
 | :-- | :-- | :-- | :-- |
@@ -93,7 +93,7 @@ in beer bash 2017/8/XX
 ---
 # GPU クラウド
 
----
++++
 ## 計算資源を金で買う
 - 時間単位とか年単位とかでクラウド上の GPU を借りることができる
   - １時間あたり１ドル前後
@@ -104,7 +104,7 @@ in beer bash 2017/8/XX
   - Google Compute Engine
   - さくら「高火力コンピューティング」
 
----
++++
 ## 使い方
 - docker コンテナ作ってサービスに投げる
 - 個人ユースだと
@@ -116,18 +116,18 @@ in beer bash 2017/8/XX
 ---
 # ディープラーニング
 
----
++++
 ## ディープラーニング
 - とにかくディープラーニングが最大のトピック
 - 実際は DL 以外にも重要な応用はあるのだけど…
 
----
++++
 ## なんでディープラーニング？
 - いろんなことが噛み合った
 - すでに GPGPU 前提みたいな事になっている
  - （他にもあるのだけど…）
 
----
++++
 ## 何が噛み合った？
 - GPU でやると速くなる典型例だった
   - 基本は数百次元のベクトルの演算
@@ -140,19 +140,19 @@ in beer bash 2017/8/XX
 
 ### 相性が良かったし需要もあった
 
----
++++
 ## nVidia volta 世代
 - 次世代の GPU
 - AI がメイントピック
 
----
++++
 ## CUDA9
 - volta サポートがメイントピック
 - volta の新機能を使えるようになる
 - テンソルコアが最重要トピック
  - 機械学習が加速する！
 
----
++++
 ## Tensor Core
 - $4{\times}4$ の行列の積と和
 $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
@@ -160,7 +160,7 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
   - 従来の積和演算命令が扱うのはスカラー値
   - 扱う対象を行列演算に拡張した
 
----
++++
 ## Tensor Core
 - $4{\times}4$ の行列の積と和
 $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
@@ -170,14 +170,14 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
   - 精度混合型の融合積和演算(FMA)
   - 実行は２クロック
 
----
++++
 ## Tensor Core
 - $4{\times}4$ で十分？
   - 巨大な行列演算は小さい行列演算の組み合わせ
   - 小さいサイズでも行列演算を高速にできれば OK
   - テンソルの階数が増えても同じ
 
----
++++
 ## Tensor Core
 - なんと脅威の 120 TFLOPS
   - すべて Tensor Core で演算した場合の話
@@ -186,8 +186,8 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
  - 地球シミュレータ（第二世代） : 122 TFLOPS(2009年で世界16位)
  - 神威太湖之光 : 93.01PFLOPS(現行世界１位)
 
----
-## What is Tensor Core
++++
+## Tensor Core
 - ハード的には
   - StreamingMultiprocessor 内にいる
   - 浮動小数点演算ユニットと同じ階層にいる
@@ -201,7 +201,7 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
 ---
 # 量子コンピューティング
 
----
++++
 ## ライバルは量子コンピューティング？
 - D-Wave 2x のこと
 - GPU と得意分野が被ってる！
@@ -209,7 +209,7 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
   - ベンチマークでのはなし
   - geForce GTX 1080 の１万倍（！）
 
----
++++
 ## とはいえ
 - 有効な問題が限られている
   - 数値最適化問題
@@ -221,7 +221,7 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
   - 焼きなまし法 = 一般的なアルゴリズム
   - 物理現象で焼きなまし法を実行
 
----
++++
 ## 具体的に解ける問題
 - 巡回セールスマン問題
   - 組合せ最適化問題
@@ -236,7 +236,7 @@ $${\boldsymbol D} = {\boldsymbol A} {\times} {\boldsymbol B} + {\boldsymbol C}$$
 ## まとめ
 - GPU はマッチすれば凄く速い！
 - ハードウェアレベルで深層学習の方を向いている
-- 競合する新しいコンピューターも出てきてる
+- 競合する新しいコンピューターも出てきてる（使い分け）
 
 ---
 # おしまい
